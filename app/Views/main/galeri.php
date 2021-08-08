@@ -20,16 +20,18 @@
             </div>
 
             <div class="row portfolio-container">
+                <?php foreach ($user as $p) : ?>
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                        <a href="/img/galeri/galeri1.jpg"> <img src="/img/galeri/<?= $p['prodi_foto'] ?>" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>network 1</h4>
+                                <p>Global</p>
 
-                <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                    <a href="/img/galeri/galeri1.jpg"> <img src="/img/galeri/galeri1.jpg" class="img-fluid" alt="">
-                        <div class="portfolio-info">
-                            <h4>network 1</h4>
-                            <p>Global</p>
+                            </div>
 
-                        </div>
-                </div>
-
+                    </div>
+                <?php endforeach  ?>
+                <!-- 
                 <div class="col-lg-4 col-md-6 portfolio-item filter-web">
                     <a href="/img/galeri/galeriweb1.jpg"> <img src="/img/galeri/galeriweb1.jpg" class="img-fluid" alt="">
                         <div class="portfolio-info">
@@ -93,7 +95,7 @@
                         <h4>Web 3</h4>
                         <p>Web</p>
                     </div>
-                </div>
+                </div> -->
 
             </div>
 

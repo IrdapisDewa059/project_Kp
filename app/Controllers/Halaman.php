@@ -2,13 +2,18 @@
 
 namespace App\Controllers;
 
+use App\Models\prodiModel;
+
 class Halaman extends BaseController
 {
     public function index()
     {
-        echo view('layout/header');
-        echo view('main/beranda');
-        echo view('layout/footer');
+        $prodi = new prodiModel;
+        $prodi_Model = $prodi->findAll();
+        $data = ['user' => $prodi_Model];
+        echo view('layout/header', $data);
+        echo view('main/beranda', $data);
+        echo view('layout/footer', $data);
     }
     //--------------------------------------------------------------------
     public function gabungusaha()
@@ -34,8 +39,11 @@ class Halaman extends BaseController
     //---------------------------------------------------------------------
     public function galeri()
     {
-        echo view('layout/header');
-        echo view('main/galeri');
-        echo view('layout/footer');
+        $prodi = new prodiModel;
+        $prodi_Model = $prodi->findAll();
+        $data = ['user' => $prodi_Model];
+        echo view('layout/header', $data);
+        echo view('main/galeri', $data);
+        echo view('layout/footer', $data);
     }
 }
